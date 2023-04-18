@@ -5,6 +5,9 @@
     owner: root
     group: root
     mode: 0644
+  notify:
+    - Reload systemd
+    - Restart service
 - name: Enable & start the service
   systemd:
     name: "{{ systemd_service_name }}"
